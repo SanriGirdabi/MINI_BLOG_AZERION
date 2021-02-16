@@ -4,7 +4,7 @@ class PostsController < ApplicationController
 
   # GET /posts or /posts.json
   def index
-    @posts = Post.all.order('date DESC')
+    @posts = Post.all.order('date ASC')
   end
 
   # GET /posts/1 or /posts/1.json
@@ -65,6 +65,6 @@ class PostsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def post_params
-      params.require(:post).permit(:header, :color, :title, :design, :body, :user_id, :date)
+      params.require(:post).permit(:header, :color, :title, :design, :body).with_defaults(user_id: current_user.id, date: Time.now.in_time_zone('Istanbul').to_date)
     end
 end

@@ -10,38 +10,37 @@
       </ul>
     </div>
   <% end %>
+    <div class="d-flex flex-column mx-auto col-6 card shadow shadow-lg py-3 bg-secondary text-light">
+      <div class="field text-center">
+        <%= form.label :header, class: 'font-weight-bold' %>
+        <%= form.select :header, ['Teknoloji', 'Sanat', 'Bilim', 'Politika'] %>
+      </div>
+    
+      <div class="field text-center">
+        <%= form.label :color, class: 'font-weight-bold' %>
+        <%= form.select :color, ['blue', 'red', 'green'] %>
+      </div>
+    
+      <div class="field text-center">
+        <%= form.label :design, class: 'font-weight-bold' %>
+        <%= form.select :design, ['İki kolon', 'Bir kolon'] %>
+      </div>
+    
+      <div class="field form-group">
+        <%= form.label :title, class: 'font-weight-bold' %>
+        <%= form.text_field :title, class: "form-control" %>
+      </div>
+    
+    
+    
+      <div class="field">
+        <%= form.label :body, class: 'font-weight-bold' %>
+        <%= form.text_area :body, class: "form-control", rows: '15' %>
+      </div>
+    
+      <div class="actions text-center">
+        <%= form.submit class: 'btn btn-success' %>
+      </div>
+    </div>
 
-  <div class="field">
-    <%= form.label :header %>
-    <%= form.text_field :header %>
-  </div>
-
-  <div class="field">
-    <%= form.label :color %>
-    <%= form.text_field :color %>
-  </div>
-
-  <div class="field">
-    <%= form.label :title %>
-    <%= form.text_field :title %>
-  </div>
-
-  <div class="field">
-    <%= form.label :design %>
-    <%= form.text_field :design %>
-  </div>
-
-  <div class="field">
-    <%= form.label :body %>
-    <%= form.text_field :body %>
-  </div>
-
-  <div class="field">
-    <%= form.label :user_id %>
-    <%= form.number_field :user_id %>
-  </div>
-
-  <div class="actions">
-    <%= form.submit %>
-  </div>
 <% end %>
