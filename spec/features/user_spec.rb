@@ -22,6 +22,26 @@ RSpec.feature "Users", type: :feature do
     click_link 'New Post'
     expect(page).to have_content('New Post')
   end
+  it 'allows user to navigate to editing page and edit the post' do
+    all(".test").first.click
+    expect(page).to have_content('Editing Post')
+    fill_in 'Title', with: 'My test title- edited'
+    fill_in 'Body', with: 'My test content, my test content, my test content- edited'
+    click_button 'Update Post'
+    expect(page).to have_content('Post was successfully updated.')
+  end
+  it 'allows user to navigate to create new post' do
+    click_link 'New Post'
+    expect(page).to have_content('New Post')
+    fill_in 'Title', with: 'My test title'
+    fill_in 'Body', with: 'My test content, my test content, my test content'
+    click_button 'Create Post'
+    expect(page).to have_content('Post was successfully created.')
+  end
+  it 'allows user to delete a post' do
+    all(".test-2").first.click
+    expect(page).to have_content('Post was successfully destroyed.')
+  end
   it 'allows user to log out' do
     click_link 'Log Out'
     expect(page).to have_content('Sign In')

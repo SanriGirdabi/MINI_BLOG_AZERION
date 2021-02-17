@@ -24,8 +24,8 @@
         <td><%= post.user_id %></td>
         <td><%= link_to 'Show', post, class: 'btn btn-success text-light' %></td>
         <% if user_signed_in? && current_user == post.user %>
-          <td><%= link_to 'Edit', edit_post_path(post), class: 'btn btn-primary text-light' %></td>
-          <td><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger text-light' %></td>
+          <td><%= link_to 'Edit', edit_post_path(post), class: 'btn btn-primary text-light test' %></td>
+          <td><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger text-light test-2' %></td>
         <% end %>
       </tr>
     <% end %>
