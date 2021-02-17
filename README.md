@@ -1,5 +1,5 @@
 # Mini-Blog-Azerion
-This is a demo app, made for the application procedure Azerion.<br>
+This is a demo app, made for the application procedure to Azerion.<br>
 There is a language confusion, I've started the app in Turkish and during the development procedure, I've switched to English.
 If consisteny on language is asked, I can change it, however I'm leaving it like that for now. I keep it simple and didn't spend to much time
 on the Frontend, everything has been Bootstrapped.
