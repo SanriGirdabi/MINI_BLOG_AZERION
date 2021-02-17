@@ -64,6 +64,7 @@ All the posts and the comments are in order by date.
 - There are two folders, one is for unit tests which is '/spec/models' that is responsible to test 'comment', 'post' models.
 - '/spec/features' folder has 1 files that is responsible from actions tests.
 - The test cases covers the log-in, log-out, navigating through the app, creation, updating and deletion of posts, two models and their associations.
+- Test ceoverage is checked with 'simple cov gem'.
 - For testing all you need to do is run ```rspec``` in your cloned folder.
 
 ## Authors
