@@ -10,6 +10,7 @@ on the Frontend, everything has been Bootstrapped.
 * SQLite
 * Bootstrap
 * RSpec
+* Devise
 
 ## Prerequisities
 
