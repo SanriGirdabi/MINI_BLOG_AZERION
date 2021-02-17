@@ -1,12 +1,13 @@
 Rails.application.routes.draw do
-  resources :comments, constraints: { subdomain: '' }
-  resources :posts, constraints: { subdomain: '' }
+  resources :posts do
+    resources :comments
+  end
   constraints subdomain: 'users' do
-    get 'users/:id', to: 'users#show'
-    get 'users/', to: 'users#index'
+    get "/users/:id", to: 'users#show', as: 'show'
+    get '/users', to: 'users#index'
   end
   devise_for :users
-  root to: 'posts#index', constraints: { subdomain: '' }
+  root to: 'posts#index'
 
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end

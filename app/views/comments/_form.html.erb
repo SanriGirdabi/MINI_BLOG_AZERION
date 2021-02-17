@@ -1,32 +1,17 @@
-<%= form_with(model: comment) do |form| %>
-  <% if comment.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(comment.errors.count, "error") %> prohibited this comment from being saved:</h2>
-
-      <ul>
-        <% comment.errors.each do |error| %>
-          <li><%= error.full_message %></li>
-        <% end %>
-      </ul>
+<div class="mt-2">
+  <%= form_with url: post_comments_url(@post), method: :post do |comment| %>
+  <div class="d-flex flex-column mx-auto col-6 card shadow shadow-lg py-3 bg-secondary text-light">
+  
+    <div class="field">
+      <%= comment.label :comment, class: 'font-weight-bold' %>
+      <%= comment.text_area :body, class: "form-control", rows: '5' %>
     </div>
-  <% end %>
-
-  <div class="field">
-    <%= form.label :body %>
-    <%= form.text_field :body %>
+  
+    <div class="actions text-center">
+      <%= comment.submit class: 'btn btn-success' %>
+    </div>
   </div>
 
-  <div class="field">
-    <%= form.label :user_id %>
-    <%= form.number_field :user_id %>
-  </div>
-
-  <div class="field">
-    <%= form.label :date %>
-    <%= form.datetime_select :date %>
-  </div>
-
-  <div class="actions">
-    <%= form.submit %>
-  </div>
 <% end %>
+</div>
+

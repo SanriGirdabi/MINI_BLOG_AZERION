@@ -9,6 +9,8 @@ class PostsController < ApplicationController
 
   # GET /posts/1 or /posts/1.json
   def show
+    @user = @post.user
+    @comments = @post.comments.order('date ASC')
   end
 
   # GET /posts/new

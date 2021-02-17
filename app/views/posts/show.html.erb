@@ -1,34 +1,59 @@
 <p id="notice"><%= notice %></p>
+<div class="card shadow shadow-lg col-8 mx-auto py-2 text-center">
+  <p>
+    <strong>Header:</strong>
+    <%= @post.header %>
+  </p>
+  
+  <p>
+    <strong>Color:</strong>
+    <%= @post.color %>
+  </p>
+  
+  <p>
+    <strong>Title:</strong>
+    <%= @post.title %>
+  </p>
+  
+  <p>
+    <strong>Design:</strong>
+    <%= @post.design %>
+  </p>
+  
+  <p>
+    <strong>Body:</strong>
+    <%= @post.body %>
+  </p>
+  
+  <p>
+    <strong>User:</strong>
+    <%= link_to @user.email, show_url(@user.id) %>
+  </p>
+   <div class="col-2 mx-auto">
+    <%= link_to 'Back', posts_path, class: 'btn btn-primary text-light' %>
+   </div>
+  
+</div>
+<div>
+  <% @comments.each do |comment| %>
+    <p><%= comment.body %></p>
+  <% end %>
+</div>
+<div class="mt-2">
+  <%= form_with url: post_comments_url(@post), method: :post do |comment| %>
+  <div class="d-flex flex-column mx-auto col-6 card shadow shadow-lg py-3 bg-secondary text-light">
+  
+    <div class="field">
+      <%= comment.label :comment, class: 'font-weight-bold' %>
+      <%= comment.text_area :body, class: "form-control", rows: '5' %>
+    </div>
+  
+    <div class="actions text-center">
+      <%= comment.submit class: 'btn btn-success' %>
+    </div>
+  </div>
 
-<p>
-  <strong>Header:</strong>
-  <%= @post.header %>
-</p>
+<% end %>
+</div>
 
-<p>
-  <strong>Color:</strong>
-  <%= @post.color %>
-</p>
 
-<p>
-  <strong>Title:</strong>
-  <%= @post.title %>
-</p>
-
-<p>
-  <strong>Design:</strong>
-  <%= @post.design %>
-</p>
-
-<p>
-  <strong>Body:</strong>
-  <%= @post.body %>
-</p>
-
-<p>
-  <strong>User:</strong>
-  <%= @post.user_id %>
-</p>
-
-<%= link_to 'Edit', edit_post_path(@post) %> |
-<%= link_to 'Back', posts_path %>
