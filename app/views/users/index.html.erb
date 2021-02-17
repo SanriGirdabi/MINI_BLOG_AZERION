@@ -1,7 +1,7 @@
 <p id="notice"><%= notice %></p>
 
 <% @users.each do |user| %>
-  <p><%= user.email %></p>
+  <p><%= user.email %> has <%= user.posts.count %> posts</p>
 <% end %>
 
-<%= link_to 'ana sayfa', root_url(subdomain: '') %>
+<%= link_to 'ana sayfa', root_url(subdomain: ''), class: 'btn btn-success text-light' %>

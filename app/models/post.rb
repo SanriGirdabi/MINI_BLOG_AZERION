@@ -8,4 +8,5 @@ class Post < ApplicationRecord
   validates :title, presence: true
   validates :design, presence: true
   validates :date, presence: true
+  validates_length_of :body, minimum: 15
 end

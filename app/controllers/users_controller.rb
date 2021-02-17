@@ -10,5 +10,4 @@ class UsersController < ApplicationController
       @grouped_posts.push(item)
     end
   end
-
 end
