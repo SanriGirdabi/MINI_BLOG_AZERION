@@ -1,6 +1,8 @@
 <h1 class="text-center">Here is your comment</h1>
 
+<div class="text-center mt-5 card w-50 mx-auto py-5">
+  <%= @comment.body %>
+  <%= link_to 'Edit Comment', edit_post_comment_path(@comment), class: 'btn btn-success text-light w-25 mx-auto' %>
+</div>
 
-<%= @comment.body %>
-<%= link_to 'Edit Comment', edit_post_comment_path(@comment) %>
 

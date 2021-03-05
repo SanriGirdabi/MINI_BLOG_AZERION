@@ -1,7 +1,11 @@
 <p id="notice"><%= notice %></p>
-
-<% @users.each do |user| %>
-  <p><%= user.email %> has <%= user.posts.count %> posts</p>
+<h1 class="text-center">All Users</h1>
+<div class="text-center card w-50 mx-auto shadow-lg py-4">
+  <% @users.each do |user| %>
+  <p><%= user.email %> has <%= link_to "#{user.posts.count} posts", show_url(user) %></p>
 <% end %>
+</div>
 
-<%= link_to 'ana sayfa', root_url(subdomain: ''), class: 'btn btn-success text-light' %>
+<div class="text-center mt-4">
+  <%= link_to 'ana sayfa', root_url(subdomain: ''), class: 'btn btn-success text-light' %>
+</div>

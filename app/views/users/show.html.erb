@@ -20,8 +20,10 @@
     <% end %>
   <% end %>
 </div>
+<div class="mt-5">
+  <%= link_to 'Main Page', root_url(subdomain: ''), class: 'btn btn-primary text-light' %>
+  <%= link_to 'All Users', users_path, class: 'btn btn-success text-light' %>
+</div>
 
-<%= link_to 'Main Page', root_url(subdomain: ''), class: 'btn btn-primary text-light' %>
-<%= link_to 'All Users', users_path, class: 'btn btn-success text-light' %>
 
 

@@ -745,12 +745,45 @@
       "/home/srjnnnn/Documents/Yazılım/Kendim/mini_blog_azerion/app/helpers/comments_helper.rb": {
         "lines": [
           1,
+          1,
+          0,
+          0,
+          0,
+          null,
+          null,
           null
         ]
       },
       "/home/srjnnnn/Documents/Yazılım/Kendim/mini_blog_azerion/app/helpers/posts_helper.rb": {
         "lines": [
           1,
+          1,
+          3,
+          3,
+          null,
+          null,
+          null,
+          1,
+          9,
+          8,
+          null,
+          1,
+          null,
+          null,
+          null,
+          1,
+          89,
+          89,
+          39,
+          null,
+          null,
+          null,
+          1,
+          3,
+          3,
+          0,
+          null,
+          null,
           null
         ]
       },
@@ -973,6 +1006,6 @@
         ]
       }
     },
-    "timestamp": 1614935812
+    "timestamp": 1614956157
   }
 }
