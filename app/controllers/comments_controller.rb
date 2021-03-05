@@ -48,7 +48,11 @@ class CommentsController < ApplicationController
 
   # Use callbacks to share common setup or constraints between actions.
   def set_comment
-    @comment = current_user.comments.find_by(id: params[:id])
+    if user_signed_in?
+      @comment = current_user.comments.find_by(id: params[:id])
+    else
+      @comment = Comment.find_by(id: params[:id])
+    end
   end
 
   # Only allow a list of trusted parameters through.
