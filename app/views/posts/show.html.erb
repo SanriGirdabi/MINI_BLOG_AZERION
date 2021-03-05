@@ -38,22 +38,4 @@
   <p class="shadow shadow-lg"><%= link_to comment.body, post_comment_path(@post, comment) %> || <%= comment.user.email %></p>
   <% end %>
 </div>
-<% if user_signed_in? %>
-<div class="mt-2">
-  <%= form_with url: post_comments_url(@post), scope: :comment, method: :post do |comment| %>
-  <div class="d-flex flex-column mx-auto col-6 card shadow shadow-lg py-3 bg-secondary text-light">
-
-    <div class="field">
-      <%= comment.hidden_field :post_id, value: @post.id %>
-      <%= comment.label :comment, class: 'font-weight-bold' %>
-      <%= comment.text_area :body, class: "form-control", rows: '5' %>
-    </div>
-
-    <div class="actions text-center">
-      <%= comment.submit class: 'btn btn-success' %>
-    </div>
-  </div>
-
-  <% end %>
-</div>
-<% end %>
+<%= can_comment? %>

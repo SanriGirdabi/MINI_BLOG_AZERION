@@ -1,18 +1,17 @@
 <div class="mt-2">
-  <%= form_with model: comment, url: post_comments_url(@post), method: :post do |comment| %>
-  <%= error_checker?(comment) %>
+  <%= form_with url: post_comments_url(@post), scope: :comment, method: :post do |comment| %>
   <div class="d-flex flex-column mx-auto col-6 card shadow shadow-lg py-3 bg-secondary text-light">
-  
+
     <div class="field">
+      <%= comment.hidden_field :post_id, value: @post.id %>
       <%= comment.label :comment, class: 'font-weight-bold' %>
       <%= comment.text_area :body, class: "form-control", rows: '5' %>
     </div>
-  
+
     <div class="actions text-center">
       <%= comment.submit class: 'btn btn-success' %>
     </div>
   </div>
 
-<% end %>
+  <% end %>
 </div>
-
