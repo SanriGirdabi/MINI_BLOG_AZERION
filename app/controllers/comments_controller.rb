@@ -44,14 +44,6 @@ class CommentsController < ApplicationController
     end
   end
 
-  # DELETE /comments/1 or /comments/1.json
-  def destroy
-    @comment.destroy
-    respond_to do |format|
-      format.html { redirect_to comments_url, notice: 'Comment was successfully destroyed.' }
-    end
-  end
-
   private
 
   # Use callbacks to share common setup or constraints between actions.

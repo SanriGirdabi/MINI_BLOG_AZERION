@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   resources :posts do
-    resources :comments, only: %i[create update destroy show edit]
+    resources :comments, only: %i[create update show edit]
   end
   constraints subdomain: 'users' do
     get "/users/:id", to: 'users#show', as: 'show'

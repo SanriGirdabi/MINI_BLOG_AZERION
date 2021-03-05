@@ -1,8 +1,6 @@
 # Mini-Blog-Azerion
 This is a demo app, made for the application procedure to Azerion.<br>
-There is a language confusion, I've started the app in Turkish and during the development procedure, I've switched to English.
-If consisteny on language is asked, I can change it, however I'm leaving it like that for now. I keep it simple and didn't spend to much time
-on the Frontend, everything has been Bootstrapped.
+I keep it simple and on the Frontend, everything has been Bootstrapped.
 
 ## Built With
 * Ruby
@@ -47,7 +45,7 @@ You can see the blog posts on the main page and the details of it by clicking th
 **2**
 You can click the email anchor on the specific post page and see the details of the user. It has a users subdomain.<br>
 **3**
-If the post created with 'iki kolon' design feature, on the user page the body of the post will be splitted into two lines. Otherwise it'll be one line. <br>
+If the post created with 'Two column' design feature, on the user page the body of the post will be splitted into two lines. Otherwise it'll be one line. <br>
 **4**
 Also the color choice is affecting the title color on the user page.<br>
 **5**
@@ -57,7 +55,7 @@ You can check the validations on the related model file<br>
 **7**
 You can see the posts and the comments, but you can not create post or add comment without logging in.<br>
 **8**
-You can only update or delete your own posts. Comments can't be deleted nor edited by anyone.<br>
+You can only update or delete your own posts. You can also edit your own comments but not the other users' comments<br>
 **9**
 All the posts and the comments are in order by date.
 ## Test
