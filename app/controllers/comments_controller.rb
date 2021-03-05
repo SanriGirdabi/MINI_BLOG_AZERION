@@ -15,13 +15,31 @@ class CommentsController < ApplicationController
     end
   end
 
+  def show
+    if !@comment
+      respond_to do |format|
+        format.html { redirect_to root_path, notice: 'You are not allowed to do this!' }
+      end
+    end
+  end
+
+  def edit
+    @post = @comment.post
+  end
+
   # PATCH/PUT /comments/1 or /comments/1.json
   def update
-    respond_to do |format|
-      if @comment.update(comment_params)
-        format.html { redirect_to @comment, notice: 'Comment was successfully updated.' }
-      else
-        format.html { render :edit, status: :unprocessable_entity }
+    if check_current_user(@comment.user)
+      respond_to do |format|
+        if @comment.update(comment_params)
+          format.html { redirect_to @comment.post, notice: 'Comment was successfully updated.' }
+        else
+          format.html { render :edit, status: :unprocessable_entity }
+        end
+      end
+    else
+      respond_to do |format|
+        format.html { redirect_to @comment.post, notice: 'You are not allowed to do this!' }
       end
     end
   end
@@ -38,12 +56,12 @@ class CommentsController < ApplicationController
 
   # Use callbacks to share common setup or constraints between actions.
   def set_comment
-    @comment = Comment.find(params[:id])
+    @comment = current_user.comments.find_by(id: params[:id])
   end
 
   # Only allow a list of trusted parameters through.
   def comment_params
-    params.permit(:body, :post_id).with_defaults(user_id: current_user.id,
-                                                 date: Time.now.in_time_zone('Istanbul').to_date)
+    params.require(:comment).permit(:body, :post_id).with_defaults(user_id: current_user.id,
+                                                                   date: Time.now.in_time_zone('Istanbul').to_date)
   end
 end

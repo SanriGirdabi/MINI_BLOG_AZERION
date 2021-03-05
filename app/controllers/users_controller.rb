@@ -9,5 +9,6 @@ class UsersController < ApplicationController
     @user.posts.group_by(&:header).each do |item|
       @grouped_posts.push(item)
     end
+    @grouped_posts
   end
 end

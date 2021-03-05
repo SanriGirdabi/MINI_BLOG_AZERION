@@ -9,11 +9,11 @@
 first_users = User.create([{ email: 'sercanuygur@gmail.com', password: '1234567' },
                            { email: 'eyupsercanuygur@gmail.com', password: '8910111213' }])
 
-first_posts = Post.create([{ user_id: 1, header: 'Teknoloji', body: 'Günümüzde ilerleyen enerji ihtyacı...', color: 'red',
-                             title: 'Enerji İhtiyacı Öngörüleri', design: 'Bir kolon', date: DateTime.new(2021, 1, 4, 11) },
-                           { user_id: 2, header: 'Sanat', body: 'Postmodern sanatın eleştrisi konusu gündemden düşmeyen...',
+first_posts = Post.create([{ user_id: 1, header: 'Technology', body: 'Nowadays, increasing increasing energy demand is causing more pollution and  the', color: 'red',
+                             title: 'Energy Demand Foresight', design: 'One column', date: DateTime.new(2021, 1, 4, 11) },
+                           { user_id: 2, header: 'Art', body: 'Postmodern art is an area that is criticised by the art community and also from an outher society',
                             color: 'blue',
-                             title: 'Modern Sanat ve Eleştrisi', design: 'İki kolon', date: DateTime.new(2021, 1, 2, 15) }])
+                             title: 'Modern Art Criticism', design: 'Two column', date: DateTime.new(2021, 1, 2, 15) }])
 
 first_comments = Comment.create({ user_id: 2, post_id: 1, date: DateTime.new(2021, 9, 2, 17),
-                                   body: 'Harika bir makale devamını bekliyoruz' })
+                                   body: 'It is a great article, please keep writing those kind of articles.' })

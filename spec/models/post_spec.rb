@@ -4,8 +4,8 @@ RSpec.describe Post, type: :model do
   Rails.application.load_seed
   context 'validation' do
     subject do
-      described_class.new(user_id: 1, header: 'Teknoloji', body: 'Günümüzde ilerleyen enerji sarfiyatı ile herşey', color: 'blue',
-        title: 'Enerji İhtiyacı Öngörüleri 2', design: 'İki kolon', date: DateTime.new(2021, 1, 7, 11))
+      described_class.new(user_id: 1, header: 'Technology', body: 'Nowadays, increasing increasing energy demand is causing more pollution and the', color: 'blue',
+        title: 'Energy Demand Foresight 2', design: 'Two column', date: DateTime.new(2021, 1, 7, 11))
     end
 
     it 'Is valid with requirements' do

@@ -5,7 +5,7 @@ RSpec.describe Comment, type: :model do
   context 'validation' do
     subject do
       described_class.new(user_id: 2, post_id: 1, date: DateTime.new(2021, 2, 2, 17),
-      body: 'Şahane bir makale devamını bekliyoruz')
+      body: 'It is a great article, please keep writing those kind of articles.')
     end
 
     it 'Is valid with requirements' do
