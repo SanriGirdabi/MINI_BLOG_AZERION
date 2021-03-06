@@ -1,6 +1,6 @@
 class PostsController < ApplicationController
   before_action :set_post, only: %i[show edit update destroy]
-  before_action :authenticate_user!, only: %i[create update destroy]
+  before_action :authenticate_user!, only: %i[create update destroy edit]
 
   # GET /posts or /posts.json
   def index
@@ -43,6 +43,10 @@ class PostsController < ApplicationController
         else
           format.html { render :edit, status: :unprocessable_entity }
         end
+      end
+    else
+      respond_to do |format|
+        format.html { redirect_to root_path, notice: 'You are not allowed to do this!' }
       end
     end
   end
