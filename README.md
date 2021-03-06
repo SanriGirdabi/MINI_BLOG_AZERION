@@ -45,7 +45,7 @@ You can see the blog posts on the main page and the details of it by clicking th
 **2**
 You can click the email anchor on the specific post page and see the details of the user. It has a users subdomain.<br>
 **3**
-If the post created with 'Two column' design feature, on the user page the body of the post will be splitted into two lines. Otherwise it'll be one line. <br>
+If the post created with 'Two column' design feature, on the user page the body of the post will be half of the line. Otherwise it'll be one line. <br>
 **4**
 Also the color choice is affecting the title color on the user page.<br>
 **5**
