@@ -33,9 +33,9 @@
   </div>
 
 </div>
-<div class="text-center">
+<div class="text-center mt-3">
   <% @comments.each do |comment| %>
-  <p class="shadow shadow-lg"><%= link_to comment.body, post_comment_path(@post, comment) %> || <%= link_to comment.user.email, show_url(comment.user) %></p>
+  <p class="card shadow shadow-lg mx-auto w-50 py-3"><%= link_to comment.body, post_comment_path(@post, comment) %> <br> <%= link_to comment.user.email, show_url(comment.user) %></p>
   <% end %>
 </div>
 <%= can_comment? %>
