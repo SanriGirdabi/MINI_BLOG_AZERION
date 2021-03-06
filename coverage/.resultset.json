@@ -739,6 +739,19 @@
       "/home/srjnnnn/Documents/Yazılım/Kendim/mini_blog_azerion/app/helpers/application_helper.rb": {
         "lines": [
           1,
+          1,
+          0,
+          0,
+          0,
+          null,
+          0,
+          null,
+          null,
+          null,
+          1,
+          0,
+          0,
+          null,
           null
         ]
       },
@@ -772,9 +785,9 @@
           null,
           null,
           1,
-          89,
-          89,
-          39,
+          125,
+          125,
+          55,
           null,
           null,
           null,
@@ -830,6 +843,7 @@
       },
       "/home/srjnnnn/Documents/Yazılım/Kendim/mini_blog_azerion/app/models/comment.rb": {
         "lines": [
+          1,
           1,
           1,
           1,
@@ -978,6 +992,10 @@
           null,
           null,
           null,
+          0,
+          0,
+          null,
+          null,
           null,
           null,
           null,
@@ -1006,6 +1024,6 @@
         ]
       }
     },
-    "timestamp": 1614956157
+    "timestamp": 1615031497
   }
 }

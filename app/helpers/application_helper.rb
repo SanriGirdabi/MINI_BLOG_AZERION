@@ -7,9 +7,4 @@ module ApplicationHelper
       render 'one_column'
     end
   end
-
-  def length_checker(variable)
-    return 'disabled' if variable.empty?
-    return ''
-  end
 end
