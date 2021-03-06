@@ -1,6 +1,6 @@
 <h1 class="text-center">Update comment</h1>
 
-<%= render 'edit_form' %>
+<%= render 'edit_form', post: @post, comment: @comment %>
 <div class="text-center mt-3">
   <%= link_to 'Back', posts_path, class: 'btn btn-primary text-light' %>
 </div>

@@ -1,6 +1,7 @@
-<%= form_with url: post_comment_path(@post, @comment), scope: :comment, method: :patch do |form| %>
+<%= form_with url: post_comment_path(@post, @comment), scope: :comment, method: :put do |form| %>
   <%= error_checker?(@comment) %>
       <div class="field">
+        <%= form.hidden_field :post_id, value: @post.id %>
         <%= form.label :body, class: 'font-weight-bold' %>
         <%= form.text_area :body, class: "form-control", rows: '15' %>
       </div>

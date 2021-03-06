@@ -5,4 +5,5 @@ class Comment < ApplicationRecord
   validates :user_id, presence: true
   validates :post_id, presence: true
   validates :date, presence: true
+  validates_length_of :body, minimum: 1
 end
