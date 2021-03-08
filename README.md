@@ -83,11 +83,6 @@ Contributions, issues and feature requests are welcome!
 
 Give a ⭐️ if you like this project!
 
-## Acknowledgments
-
--   This Project was part of an assignment available on Microverse.
--   Our thanks to Microverse and all our peers and colleagues there.
-
 ## 📝 License
 
 This project is [MIT](lic.url) licensed.
